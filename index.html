@@ -4,9 +4,125 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Class Demo</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, "Noto Sans KR", sans-serif;
+      background: linear-gradient(135deg, #f7f7ff, #eef6ff);
+      color: #222;
+    }
+
+    .container {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 700px;
+      background: white;
+      border-radius: 24px;
+      padding: 50px 35px;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 30px;
+      background: #eef1ff;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin: 0 0 18px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 12px;
+      background: #222;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      opacity: 0.85;
+    }
+
+    .footer {
+      margin-top: 35px;
+      font-size: 13px;
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 40px 22px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>AI Class Demo 👋</h1>
-  <p>GitHub Pages로 만든 첫 공개 웹페이지입니다.</p>
+
+  <div class="container">
+    <div class="card">
+
+      <div class="badge">
+        AI CLASS LAB
+      </div>
+
+      <h1>
+        AI 수업 실습 페이지 👋
+      </h1>
+
+      <p>
+        생성형 AI를 활용한 다양한 실습과 웹앱을
+        직접 만들어보는 공간입니다.
+        <br><br>
+        앞으로 퀴즈, 프롬프트 실습, 게임,
+        AI 활용 자료를 하나씩 추가해볼 예정입니다.
+      </p>
+
+      <a class="button" href="#">
+        실습 시작하기
+      </a>
+
+      <div class="footer">
+        Powered by GitHub Pages
+      </div>
+
+    </div>
+  </div>
+
 </body>
 </html>
