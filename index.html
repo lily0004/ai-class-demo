@@ -119,7 +119,7 @@
 <p id="message" style="display:none; margin-top:20px; font-weight:bold;">
   🎉 실습을 시작합니다! 다음 단계에서 퀴즈 기능을 추가해볼게요.
 </p>
-<div style="margin-top:40px; text-align:left;">
+<div id="quizArea" style="display:none; margin-top:40px; text-align:left;">
   <h2 style="text-align:center;">AI 기초 상식 퀴즈 🤖</h2>
 
   <p style="font-weight:bold; color:#222;">
@@ -142,6 +142,7 @@
 <script>
   function showMessage() {
     document.getElementById("message").style.display = "block";
+    document.getElementById("quizArea").style.display = "block";
   }
 
   function checkAnswer(isCorrect) {
