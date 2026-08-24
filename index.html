@@ -119,7 +119,20 @@
 <p id="message" style="display:none; margin-top:20px; font-weight:bold;">
   🎉 실습을 시작합니다! 다음 단계에서 퀴즈 기능을 추가해볼게요.
 </p>
+<div style="margin-top:40px; text-align:left;">
+  <h2 style="text-align:center;">AI 기초 상식 퀴즈 🤖</h2>
 
+  <p style="font-weight:bold; color:#222;">
+    Q. 생성형 AI의 예로 알맞은 것은?
+  </p>
+
+  <button onclick="checkAnswer(false)">① 계산기</button>
+  <button onclick="checkAnswer(true)">② ChatGPT</button>
+  <button onclick="checkAnswer(false)">③ 메모장</button>
+  <button onclick="checkAnswer(false)">④ 파일 탐색기</button>
+
+  <p id="quizResult" style="font-weight:bold; margin-top:20px;"></p>
+</div>
       <div class="footer">
         Powered by GitHub Pages
       </div>
@@ -129,6 +142,16 @@
 <script>
   function showMessage() {
     document.getElementById("message").style.display = "block";
+  }
+
+  function checkAnswer(isCorrect) {
+    const result = document.getElementById("quizResult");
+
+    if (isCorrect) {
+      result.innerHTML = "✅ 정답입니다!";
+    } else {
+      result.innerHTML = "❌ 다시 생각해보세요.";
+    }
   }
 </script>
 </body>
