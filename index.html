@@ -142,10 +142,10 @@
     Q. 생성형 AI의 예로 알맞은 것은?
   </p>
 
-<button class="quiz-option" onclick="checkAnswer(false)">① 계산기</button>
-<button class="quiz-option" onclick="checkAnswer(true)">② ChatGPT</button>
-<button class="quiz-option" onclick="checkAnswer(false)">③ 메모장</button>
-<button class="quiz-option" onclick="checkAnswer(false)">④ 파일 탐색기</button>
+<button class="quiz-option" onclick="checkAnswer(false, this)">① 계산기</button>
+<button class="quiz-option" onclick="checkAnswer(true, this)">② ChatGPT</button>
+<button class="quiz-option" onclick="checkAnswer(false, this)">③ 메모장</button>
+<button class="quiz-option" onclick="checkAnswer(false, this)">④ 파일 탐색기</button>
 
   <p id="quizResult" style="font-weight:bold; margin-top:20px;"></p>
 </div>
@@ -160,13 +160,17 @@
   document.getElementById("quizArea").style.display = "block";
 }
 
-  function checkAnswer(isCorrect) {
-    const result = document.getElementById("quizResult");
+  function checkAnswer(isCorrect, button) {
+  const result = document.getElementById("quizResult");
 
-    if (isCorrect) {
-      result.innerHTML = "✅ 정답입니다!";
-    } else {
-      result.innerHTML = "❌ 다시 생각해보세요.";
-    }
+  if (isCorrect) {
+    result.innerHTML = "✅ 정답입니다!";
+    button.style.backgroundColor = "#d9f7df";
+    button.style.borderColor = "#48a868";
+  } else {
+    result.innerHTML = "❌ 다시 생각해보세요.";
+    button.style.backgroundColor = "#ffe0e0";
+    button.style.borderColor = "#e36a6a";
   }
+}
 </script>
