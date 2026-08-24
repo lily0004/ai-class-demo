@@ -142,10 +142,10 @@
     Q. 생성형 AI의 예로 알맞은 것은?
   </p>
 
-<button class="quiz-option" onclick="checkAnswer(false, this)">① 계산기</button>
-<button class="quiz-option" onclick="checkAnswer(true, this)">② ChatGPT</button>
-<button class="quiz-option" onclick="checkAnswer(false, this)">③ 메모장</button>
-<button class="quiz-option" onclick="checkAnswer(false, this)">④ 파일 탐색기</button>
+<button class="quiz-option q1-option" onclick="checkAnswer(false, this)">① 계산기</button>
+<button class="quiz-option q1-option" onclick="checkAnswer(true, this)">② ChatGPT</button>
+<button class="quiz-option q1-option" onclick="checkAnswer(false, this)">③ 메모장</button>
+<button class="quiz-option q1-option" onclick="checkAnswer(false, this)">④ 파일 탐색기</button>
 
   <p id="quizResult" style="font-weight:bold; margin-top:20px;"></p>
   <button
@@ -183,7 +183,7 @@
 
 function checkAnswer(isCorrect, button) {
   const result = document.getElementById("quizResult");
-  const buttons = document.querySelectorAll(".quiz-option");
+  const buttons = document.querySelectorAll(".q1-option")
 
   // 이전에 선택했던 버튼 색상 초기화
   buttons.forEach(function(btn) {
