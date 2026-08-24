@@ -148,6 +148,13 @@
 <button class="quiz-option" onclick="checkAnswer(false, this)">④ 파일 탐색기</button>
 
   <p id="quizResult" style="font-weight:bold; margin-top:20px;"></p>
+  <button
+  id="nextButton"
+  class="quiz-option"
+  style="display:none; text-align:center; font-weight:bold;"
+  onclick="nextQuestion()">
+  다음 문제 →
+</button>
 </div>
       <div class="footer">
         Powered by GitHub Pages
@@ -179,8 +186,9 @@ if (isCorrect) {
     buttons.forEach(function(btn) {
       btn.disabled = true;
     });
-
-  } else {
+ 
+    document.getElementById("nextButton").style.display = "block";
+    } else {
     result.innerHTML = "❌ 다시 생각해보세요.";
     button.style.backgroundColor = "#ffe0e0";
     button.style.borderColor = "#e36a6a";
