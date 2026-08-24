@@ -113,7 +113,7 @@
         AI 활용 자료를 하나씩 추가해볼 예정입니다.
       </p>
 
-      <a class="button" href="#" onclick="showMessage(); return false;">
+      <a class="button" href="#" onclick="startQuiz(); return false;">
   실습 시작하기
       </a>
 
@@ -138,9 +138,9 @@
     </div>
   </div>
 <script>
-  function showMessage() {
-    document.getElementById("quizArea").style.display = "block";
-  }
+  function startQuiz() {
+  document.getElementById("quizArea").style.display = "block";
+}
 
   function checkAnswer(isCorrect) {
     const result = document.getElementById("quizResult");
