@@ -70,6 +70,24 @@
       opacity: 0.85;
     }
 
+    .quiz-option {
+  width: 100%;
+  margin: 8px 0;
+  padding: 14px 16px;
+  border: 1px solid #d9dce5;
+  border-radius: 12px;
+  background: #ffffff;
+  font-size: 16px;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.quiz-option:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+    
     .footer {
       margin-top: 35px;
       font-size: 13px;
@@ -124,10 +142,10 @@
     Q. 생성형 AI의 예로 알맞은 것은?
   </p>
 
-  <button onclick="checkAnswer(false)">① 계산기</button>
-  <button onclick="checkAnswer(true)">② ChatGPT</button>
-  <button onclick="checkAnswer(false)">③ 메모장</button>
-  <button onclick="checkAnswer(false)">④ 파일 탐색기</button>
+  <button class="quiz-option" onclick="checkAnswer(false)">① 계산기</button>
+  <button class="quiz-option" onclick="checkAnswer(true)">② ChatGPT</button>
+  <button class="quiz-option" onclick="checkAnswer(false)">③ 메모장</button>
+  <button class="quiz-option" onclick="checkAnswer(false)">④ 파일 탐색기</button>
 
   <p id="quizResult" style="font-weight:bold; margin-top:20px;"></p>
 </div>
