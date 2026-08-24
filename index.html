@@ -162,11 +162,24 @@
 
 function checkAnswer(isCorrect, button) {
   const result = document.getElementById("quizResult");
+  const buttons = document.querySelectorAll(".quiz-option");
+
+  // 이전에 선택했던 버튼 색상 초기화
+  buttons.forEach(function(btn) {
+    btn.style.backgroundColor = "#ffffff";
+    btn.style.borderColor = "#d9dce5";
+  });
 
   if (isCorrect) {
     result.innerHTML = "✅ 정답입니다!";
     button.style.backgroundColor = "#d9f7df";
     button.style.borderColor = "#48a868";
+
+    // 정답을 맞히면 모든 선택지 비활성화
+    buttons.forEach(function(btn) {
+      btn.disabled = true;
+    });
+
   } else {
     result.innerHTML = "❌ 다시 생각해보세요.";
     button.style.backgroundColor = "#ffe0e0";
