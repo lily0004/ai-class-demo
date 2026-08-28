@@ -214,5 +214,28 @@ function nextQuestion() {
   document.getElementById("nextButton").style.display = "none";
   document.getElementById("question2").style.display = "block";
 }
-  
+function checkAnswer2(isCorrect, button) {
+  const result = document.getElementById("quizResult2");
+  const buttons = document.querySelectorAll("#question2 .quiz-option");
+
+  buttons.forEach(function(btn) {
+    btn.style.backgroundColor = "#ffffff";
+    btn.style.borderColor = "#d9dce5";
+  });
+
+  if (isCorrect) {
+    result.innerHTML = "✅ 정답입니다!";
+    button.style.backgroundColor = "#d9f7df";
+    button.style.borderColor = "#48a868";
+
+    buttons.forEach(function(btn) {
+      btn.disabled = true;
+    });
+
+  } else {
+    result.innerHTML = "❌ 다시 생각해보세요.";
+    button.style.backgroundColor = "#ffe0e0";
+    button.style.borderColor = "#e36a6a";
+  }
+}
 </script>
